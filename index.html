@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    .light_font {
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(135, 133, 133);
+    }
+
+    .bold_font {
+      font-family: 'Fraunces', serif;
+    }
+
+    .image2 {
+      display: none;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      background-color: #F3EAE3;
+      max-height: 100vh;
+    }
+
+    #container {
+      background-color: white;
+      box-shadow: 0.45rem 0.45rem 0.75rem 0.25rem rgba(0, 0, 0, 0.5);
+      width: 40rem;
+      display: flex;
+      border-radius: 0.5rem;
+      margin: auto;
+      margin-top: 8.5rem;
+    }
+
+    #img_parfem {
+      height: 30.5rem; width: 20rem;
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    #perfume {
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    #tekst {
+      padding: 2.5rem;
+      text-align: left;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+    #description {
+      margin-bottom: 1rem;
+    }
+    #price {
+      font-size: 2rem;
+      color: #3D8168;
+      grid-area: price;
+      margin-right: 1.5rem;
+    }
+    #old_price {
+      grid-area: old_price;
+      margin-top: 0.6rem;
+    }
+
+    #price_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "price old_price";
+    }
+
+    #button {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #3D8168;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 0.8rem;
+      margin-top: 1.5rem;
+    }
+    #button>img {
+      margin-right: 0.35rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media all and (max-width: 450px) { /*za mobilne uredjaje*/
+      #container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: auto;
+        border-radius: 0.5rem;
+      }
+
+      #tekst {
+        font-size: 1rem;
+      }
+
+      #img_parfem {
+        display: none;
+      }
+
+      .image2 {
+        display: block;
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="img_parfem" src="./images/image-product-desktop.jpg" alt="Parfume_desktop">
+    <img class="image2" src="./images/image-product-mobile.jpg" alt="Parfume_mobile">
+    <div id="tekst">
+      <p id="perfume" class="light_font">Perfume</p>
+
+      <h1 class="bold_font">Gabrielle Essence Eau De Parfum</h1>
+      <p id="description" class="light_font">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+
+      <div id="price_container">
+        <p id="price" class="bold_font">$149.99</p>
+        <p id="old_price" class="light_font"><del>$169.99</del></p>
+      </div>
+
+      <div id="button">
+        <img src="./images/icon-cart.svg" alt="korpica">
+        <a href="#">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">IvaBas</a>.
+  </div>
+</body>
+</html>
